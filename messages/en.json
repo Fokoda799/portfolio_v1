@@ -1,0 +1,106 @@
+{
+  "hud": {
+    "xp": "XP",
+    "mute": "Mute",
+    "unmute": "Unmute",
+    "them": "Toggle Theme",
+    "language": "Change Language"
+  },
+  "hero": {
+    "greeting": "Greetings, traveler!",
+    "intro": "I'm a Full-Stack Code Warden mastering the arts of C++, Node, and React.",
+    "cta": {
+      "cv": "Equip My CV",
+      "projects": "Explore My Projects",
+      "contact": "Send Summons"
+    },
+    "xp": "XP",
+    "scroll": " Scroll to continue your adventure"
+  },
+  "nav": {
+    "home": "Hub",
+    "about": "Town Hall",
+    "projects": "Dungeon",
+    "skills": "Training Grounds",
+    "experience": "Timeline",
+    "resume": "Inventory",
+    "contact": "Quest Board",
+    "testimonials": "Allies"
+  },
+  "about": {
+    "title": "The Backstory",
+    "mission": "Every hero needs an origin story. Mine involves turning caffeine into code and bugs into features.",
+    "readMore": "Continue Reading..."
+  },
+  "projects": {
+    "title": "Quest Log",
+    "subtitle": "Completed dungeons and legendary loot",
+    "filter": {
+      "all": "All Quests",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "fullstack": "Full Stack"
+    },
+    "details": "View Details",
+    "liveDemo": "Enter Dungeon",
+    "sourceCode": "Inspect Runes"
+  },
+  "skills": {
+    "title": "Character Stats",
+    "subtitle": "Skills forged through countless battles",
+    "categories": {
+      "frontend": "Frontend Mastery",
+      "backend": "Backend Sorcery",
+      "tools": "Legendary Tools",
+      "soft": "Guild Skills"
+    }
+  },
+  "experience": {
+    "title": "Journey Timeline",
+    "subtitle": "Conquered territories and earned titles",
+    "present": "Present"
+  },
+  "resume": {
+    "title": "Equipment Inventory",
+    "subtitle": "Everything a recruiter needs to join your party",
+    "download": "Download Scroll",
+    "print": "Printable Version"
+  },
+  "contact": {
+    "title": "Quest Board",
+    "subtitle": "Have a quest? Leave your mark here.",
+    "form": {
+      "name": "Your Name",
+      "email": "Raven Address",
+      "message": "Quest Details",
+      "send": "Dispatch Message"
+    },
+    "success": "Message sent! The courier is on the way.",
+    "error": "Quest failed. Try again?",
+    "social": "Find me in these realms"
+  },
+  "testimonials": {
+    "title": "Trusted Allies",
+    "subtitle": "What fellow adventurers say"
+  },
+  "footer": {
+    "crafted": "Crafted with",
+    "privacy": "Privacy Scroll",
+    "language": "Language",
+    "theme": "Theme"
+  },
+  "audio": {
+    "consent": "Would you like background music for your adventure?",
+    "accept": "Yes, Play Music",
+    "decline": "No Thanks",
+    "mute": "Mute",
+    "unmute": "Unmute"
+  },
+  "achievements": {
+    "title": "Achievements Unlocked",
+    "visitor": "First Visit",
+    "explorer": "Section Explorer",
+    "reader": "Lore Master",
+    "clicker": "Button Masher"
+  }
+}

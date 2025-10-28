@@ -1,0 +1,106 @@
+{
+  "hud": {
+    "xp": "XP",
+    "mute": "Mute",
+    "unmute": "Unmute",
+    "them": "Changer de Thème",
+    "language": "Changer de Langue"
+  },
+  "hero": {
+    "greeting": "Salutations, voyageur!",
+    "intro": "Je suis un Gardien du Code Full-Stack, maître des arts de C++, Node et React.",
+    "cta": {
+      "cv": "Équiper Mon CV",
+      "projects": "Explorer mes projets",
+      "contact": "Envoyer une Convocation"
+    },
+    "xp": "XP",
+    "scroll": " Faites défiler pour continuer votre aventure"
+  },
+  "nav": {
+    "home": "Centre",
+    "about": "Hôtel de Ville",
+    "projects": "Donjon",
+    "skills": "Terrain d'Entraînement",
+    "experience": "Chronologie",
+    "resume": "Inventaire",
+    "contact": "Tableau des Quêtes",
+    "testimonials": "Alliés"
+  },
+  "about": {
+    "title": "L'Histoire d'Origine",
+    "mission": "Chaque héros a besoin d'une histoire. La mienne implique de transformer la caféine en code et les bugs en fonctionnalités.",
+    "readMore": "Continuer la Lecture..."
+  },
+  "projects": {
+    "title": "Journal des Quêtes",
+    "subtitle": "Donjons conquis et butin légendaire",
+    "filter": {
+      "all": "Toutes les Quêtes",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "fullstack": "Full Stack"
+    },
+    "details": "Voir les Détails",
+    "liveDemo": "Entrer dans le Donjon",
+    "sourceCode": "Inspecter les Runes"
+  },
+  "skills": {
+    "title": "Statistiques du Personnage",
+    "subtitle": "Compétences forgées à travers d'innombrables batailles",
+    "categories": {
+      "frontend": "Maîtrise Frontend",
+      "backend": "Sorcellerie Backend",
+      "tools": "Outils Légendaires",
+      "soft": "Compétences de Guilde"
+    }
+  },
+  "experience": {
+    "title": "Chronologie du Voyage",
+    "subtitle": "Territoires conquis et titres gagnés",
+    "present": "Présent"
+  },
+  "resume": {
+    "title": "Inventaire d'Équipement",
+    "subtitle": "Tout ce dont un recruteur a besoin pour rejoindre votre groupe",
+    "download": "Télécharger le Parchemin",
+    "print": "Version Imprimable"
+  },
+  "contact": {
+    "title": "Tableau des Quêtes",
+    "subtitle": "Vous avez une quête ? Laissez votre marque ici.",
+    "form": {
+      "name": "Votre Nom",
+      "email": "Adresse du Corbeau",
+      "message": "Détails de la Quête",
+      "send": "Envoyer le Message"
+    },
+    "success": "Message envoyé ! Le courrier est en route.",
+    "error": "Quête échouée. Réessayer ?",
+    "social": "Trouvez-moi dans ces royaumes"
+  },
+  "testimonials": {
+    "title": "Alliés de Confiance",
+    "subtitle": "Ce que disent les autres aventuriers"
+  },
+  "footer": {
+    "crafted": "Créé avec",
+    "privacy": "Parchemin de Confidentialité",
+    "language": "Langue",
+    "theme": "Thème"
+  },
+  "audio": {
+    "consent": "Voulez-vous de la musique de fond pour votre aventure ?",
+    "accept": "Oui, Jouer de la Musique",
+    "decline": "Non Merci",
+    "mute": "Muet",
+    "unmute": "Son"
+  },
+  "achievements": {
+    "title": "Succès Débloqués",
+    "visitor": "Première Visite",
+    "explorer": "Explorateur de Section",
+    "reader": "Maître du Savoir",
+    "clicker": "Maître des Boutons"
+  }
+}
