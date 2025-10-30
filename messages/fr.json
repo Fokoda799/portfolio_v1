@@ -29,8 +29,11 @@
   },
   "about": {
     "title": "L'Histoire d'Origine",
+    "heading": "Quête : Construire des Expériences Numériques",
     "mission": "Chaque héros a besoin d'une histoire. La mienne implique de transformer la caféine en code et les bugs en fonctionnalités.",
-    "readMore": "Continuer la Lecture..."
+    "about": "Je suis un ingénieur logiciel autodidacte, passionné par la création d’applications fiables, performantes et centrées sur l’utilisateur. Spécialisé en développement backend, j’aime concevoir des API, gérer des bases de données et optimiser les systèmes. Grâce à une solide maîtrise des technologies web, du cloud et des réseaux, je conçois des solutions sécurisées et efficaces. Curieux et déterminé, j’apprends sans cesse de nouveaux outils pour transformer les idées en logiciels à fort impact.",
+    "resume": "Accepter la Quête : Récupérer le CV du Héros",
+    "image": "Cliquez pour retourner"
   },
   "projects": {
     "title": "Journal des Quêtes",

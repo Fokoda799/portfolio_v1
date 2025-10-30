@@ -29,8 +29,11 @@
   },
   "about": {
     "title": "The Backstory",
+    "heading": "Quest: Building Digital Experiences",
     "mission": "Every hero needs an origin story. Mine involves turning caffeine into code and bugs into features.",
-    "readMore": "Continue Reading..."
+    "about": "I’m a self-taught software engineer passionate about building reliable, scalable, and user-focused applications. My main focus is backend development, where I enjoy designing APIs, managing databases, and optimizing system performance. I have a strong foundation in web technologies, cloud principles, and computer networking, which helps me create secure and efficient systems. Driven by curiosity and problem-solving, I’m constantly learning new tools and frameworks to expand my technical expertise and turn ideas into impactful software.",
+    "resume": "Accept Quest: Retrieve the Hero’s Resume",
+    "image": "Click to flip" 
   },
   "projects": {
     "title": "Quest Log",
