@@ -33,7 +33,7 @@ export default function HomePage() {
   const handleNavigate = (sectionId: string) => {
     const element = sectionsRef.current[sectionId];
     if (element) {
-      const offsetTop = element.offsetTop - 80;
+      const offsetTop = element.offsetTop;
       window.scrollTo({ top: offsetTop, behavior: 'smooth' });
       setActiveSection(sectionId);
     }
@@ -41,7 +41,7 @@ export default function HomePage() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200;
+      const scrollPosition = window.scrollY + 300;
 
       for (const section of sections) {
         const element = sectionsRef.current[section.id];
