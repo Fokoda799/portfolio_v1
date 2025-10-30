@@ -36,17 +36,23 @@
     "image": "Cliquez pour retourner"
   },
   "projects": {
-    "title": "Journal des Quêtes",
-    "subtitle": "Donjons conquis et butin légendaire",
+    "title": "Quêtes et Créations",
+    "subtitle": "Quêtes accomplies et créations remarquables forgées",
     "filter": {
       "all": "Toutes les Quêtes",
       "frontend": "Frontend",
       "backend": "Backend",
       "fullstack": "Full Stack"
     },
+    "featured_quests": "Quêtes en Vedette",
+    "featured": "Vedette",
     "details": "Voir les Détails",
-    "liveDemo": "Entrer dans le Donjon",
-    "sourceCode": "Inspecter les Runes"
+    "liveDemo": "Démo",
+    "sourceCode": "Code",
+    "techStack": "Stack Technologique",
+    "projects": "Projets",
+    "noQuests": "Aucune quête trouvée dans cette catégorie",
+    "try": "Essayez d'explorer d'autres catégories!"
   },
   "skills": {
     "title": "Statistiques du Personnage",

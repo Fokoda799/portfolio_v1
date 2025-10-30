@@ -86,6 +86,10 @@
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
   }
+  body::selection {
+    background-color: #47ffed; /* highlight color */
+    color: #413e3e; /* text color */
+  }
 }
 
 @font-face{
