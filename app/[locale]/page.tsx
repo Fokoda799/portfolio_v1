@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import Navigation from '@/components/rpg/Navigation';
+// import Navigation from '@/components/rpg/Navigation';
 import HUD from '@/components/rpg/HUD';
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
@@ -12,7 +12,7 @@ import ExperienceSection from '@/components/sections/ExperienceSection';
 import ResumeSection from '@/components/sections/ResumeSection';
 import ContactSection from '@/components/sections/ContactSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
-import MagicCursor from '@/components/ui/MagicCursor';
+// import MagicCursor from '@/components/ui/MagicCursor';
 
 export default function HomePage() {
   const [activeSection, setActiveSection] = useState('home');

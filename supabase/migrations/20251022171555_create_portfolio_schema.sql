@@ -110,9 +110,12 @@ CREATE TABLE IF NOT EXISTS skills (
   name text NOT NULL,
   category text NOT NULL,
   proficiency integer NOT NULL DEFAULT 50,
+  description text DEFAULT '',
+  years_experience integer DEFAULT 0,
   icon text,
   "order" integer DEFAULT 0,
-  created_at timestamptz DEFAULT now()
+  created_at timestamptz DEFAULT now(),
+  projects_count integer DEFAULT 0
 );
 
 -- Create experience table
