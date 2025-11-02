@@ -2,32 +2,29 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-// import Navigation from '@/components/rpg/Navigation';
 import HUD from '@/components/rpg/HUD';
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ProjectsSection from '@/components/sections/ProjectsSection';
 import SkillsSection from '@/components/sections/SkillsSection';
 import ExperienceSection from '@/components/sections/ExperienceSection';
-import ResumeSection from '@/components/sections/ResumeSection';
 import ContactSection from '@/components/sections/ContactSection';
-import TestimonialsSection from '@/components/sections/TestimonialsSection';
-// import MagicCursor from '@/components/ui/MagicCursor';
+import FooterSection from '@/components/sections/FooterSection';
 
 export default function HomePage() {
   const [activeSection, setActiveSection] = useState('home');
   const sectionsRef = useRef<{ [key: string]: HTMLDivElement | null }>({});
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
+  // Add all sections including footer
   const sections = [
     { id: 'home', component: HeroSection },
     { id: 'about', component: AboutSection },
     { id: 'projects', component: ProjectsSection },
     { id: 'skills', component: SkillsSection },
     { id: 'experience', component: ExperienceSection },
-    // { id: 'resume', component: ResumeSection },
     { id: 'contact', component: ContactSection },
-    // { id: 'testimonials', component: TestimonialsSection },
+    { id: 'footer', component: FooterSection },
   ];
 
   const handleNavigate = (sectionId: string) => {
@@ -41,7 +38,7 @@ export default function HomePage() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 300;
+      const scrollMiddle = window.scrollY + window.innerHeight / 2;
 
       for (const section of sections) {
         const element = sectionsRef.current[section.id];
@@ -49,8 +46,10 @@ export default function HomePage() {
           const offsetTop = element.offsetTop;
           const offsetBottom = offsetTop + element.offsetHeight;
 
-          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
-            setActiveSection(section.id);
+          if (scrollMiddle >= offsetTop && scrollMiddle < offsetBottom) {
+            if (activeSection !== section.id) {
+              setActiveSection(section.id);
+            }
             break;
           }
         }
@@ -61,7 +60,7 @@ export default function HomePage() {
     handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [activeSection]);
 
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
@@ -81,42 +80,18 @@ export default function HomePage() {
   }, [activeSection]);
 
   useEffect(() => {
-    const handleClick = (e: MouseEvent) => {
-      const burst = document.createElement("div");
-      burst.className = "click-burst";
-      burst.style.left = `${e.clientX}px`;
-      burst.style.top = `${e.clientY}px`;
-      document.body.appendChild(burst);
-      setTimeout(() => burst.remove(), 600);
-    };
-
-    window.addEventListener("click", handleClick);
-
-    return () => {
-      window.removeEventListener("click", handleClick);
-    };
-  }, []);
-
-  useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: e.clientX,
-        y: e.clientY
-      });
+      setMousePosition({ x: e.clientX, y: e.clientY });
     };
-
     window.addEventListener('mousemove', handleMouseMove);
-    
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
+    return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
   return (
     <>
       <main className="relative min-h-screen">
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900" />
-      
+
         {/* Mouse glow effect */}
         <div
           className="pointer-events-none fixed z-30 transition-opacity duration-300"
@@ -125,13 +100,13 @@ export default function HomePage() {
             height: '800px',
             background: 'radial-gradient(circle at center, rgba(216, 216, 216, 0.15), transparent 80%)',
             filter: 'blur(80px)',
-            left: mousePosition.x - 396,
-            top: mousePosition.y - 396,
+            left: mousePosition.x - 400,
+            top: mousePosition.y - 400,
           }}
         />
-        {/* <Navigation activeSection={activeSection} onNavigate={handleNavigate} /> */}
+
         <HUD />
-        {/* <MagicCursor /> */}
+
         <div className="relative z-20">
           {sections.map(({ id, component: Component }) => (
             <div
@@ -146,35 +121,6 @@ export default function HomePage() {
           ))}
         </div>
       </main>
-      <footer className="bg-slate-950 border-t-4 border-amber-500 py-8 px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <motion.p
-              className="text-slate-400 text-sm mb-4"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-            >
-              Crafted with{' '}
-              <span className="text-red-500">♥</span>{' '}
-              and{' '}
-              <span className="text-amber-400">pixels</span>
-            </motion.p>
-            <div className="flex justify-center gap-4 flex-wrap text-xs text-slate-500">
-              <a href="#" className="hover:text-amber-400 transition-colors">
-                Privacy Policy
-              </a>
-              <span>•</span>
-              <a href="#" className="hover:text-amber-400 transition-colors">
-                Terms of Service
-              </a>
-              <span>•</span>
-              <span>© 2025 RPG Portfolio</span>
-            </div>
-            <p className="text-xs text-slate-600 mt-4 font-pixel">
-              Level 99 Developer
-            </p>
-          </div>
-        </footer>
     </>
   );
 }
