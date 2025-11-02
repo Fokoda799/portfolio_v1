@@ -38,7 +38,7 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
       setIsMuted(savedMuted === 'true');
     }
     if (savedVolume !== null) {
-      setVolumeState(parseFloat(savedVolume));
+      setVolumeState(parseFloat(savedVolume || '0.5'));
     }
     if (savedConsent !== null) {
       setHasConsent(savedConsent === 'true');
