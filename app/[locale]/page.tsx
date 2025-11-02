@@ -25,9 +25,9 @@ export default function HomePage() {
     { id: 'projects', component: ProjectsSection },
     { id: 'skills', component: SkillsSection },
     { id: 'experience', component: ExperienceSection },
-    { id: 'resume', component: ResumeSection },
+    // { id: 'resume', component: ResumeSection },
     { id: 'contact', component: ContactSection },
-    { id: 'testimonials', component: TestimonialsSection },
+    // { id: 'testimonials', component: TestimonialsSection },
   ];
 
   const handleNavigate = (sectionId: string) => {
@@ -113,71 +113,68 @@ export default function HomePage() {
   }, []);
 
   return (
-    <main className="relative min-h-screen">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900" />
+    <>
+      <main className="relative min-h-screen">
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900" />
       
-      {/* Mouse glow effect */}
-      <div
-        className="pointer-events-none fixed z-30 transition-opacity duration-300"
-        style={{
-          width: '800px',
-          height: '800px',
-          background: 'radial-gradient(circle at center, rgba(216, 216, 216, 0.15), transparent 80%)',
-          filter: 'blur(80px)',
-          left: mousePosition.x - 396,
-          top: mousePosition.y - 396,
-        }}
-      />
-
-      {/* <Navigation activeSection={activeSection} onNavigate={handleNavigate} /> */}
-      <HUD />
-      {/* <MagicCursor /> */}
-
-      <div className="relative z-20">
-        {sections.map(({ id, component: Component }) => (
-          <div
-            key={id}
-            ref={(el) => {
-              sectionsRef.current[id] = el;
-            }}
-            id={id}
-          >
-            <Component onNavigate={handleNavigate} />
-          </div>
-        ))}
-      </div>
-
-      <footer className="bg-slate-950 border-t-4 border-amber-500 py-8 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <motion.p
-            className="text-slate-400 text-sm mb-4"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            Crafted with{' '}
-            <span className="text-red-500">♥</span>{' '}
-            and{' '}
-            <span className="text-amber-400">pixels</span>
-          </motion.p>
-
-          <div className="flex justify-center gap-4 flex-wrap text-xs text-slate-500">
-            <a href="#" className="hover:text-amber-400 transition-colors">
-              Privacy Policy
-            </a>
-            <span>•</span>
-            <a href="#" className="hover:text-amber-400 transition-colors">
-              Terms of Service
-            </a>
-            <span>•</span>
-            <span>© 2025 RPG Portfolio</span>
-          </div>
-
-          <p className="text-xs text-slate-600 mt-4 font-pixel">
-            Level 99 Developer
-          </p>
+        {/* Mouse glow effect */}
+        <div
+          className="pointer-events-none fixed z-30 transition-opacity duration-300"
+          style={{
+            width: '800px',
+            height: '800px',
+            background: 'radial-gradient(circle at center, rgba(216, 216, 216, 0.15), transparent 80%)',
+            filter: 'blur(80px)',
+            left: mousePosition.x - 396,
+            top: mousePosition.y - 396,
+          }}
+        />
+        {/* <Navigation activeSection={activeSection} onNavigate={handleNavigate} /> */}
+        <HUD />
+        {/* <MagicCursor /> */}
+        <div className="relative z-20">
+          {sections.map(({ id, component: Component }) => (
+            <div
+              key={id}
+              ref={(el) => {
+                sectionsRef.current[id] = el;
+              }}
+              id={id}
+            >
+              <Component onNavigate={handleNavigate} />
+            </div>
+          ))}
         </div>
-      </footer>
-    </main>
+      </main>
+      <footer className="bg-slate-950 border-t-4 border-amber-500 py-8 px-4">
+          <div className="max-w-6xl mx-auto text-center">
+            <motion.p
+              className="text-slate-400 text-sm mb-4"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+            >
+              Crafted with{' '}
+              <span className="text-red-500">♥</span>{' '}
+              and{' '}
+              <span className="text-amber-400">pixels</span>
+            </motion.p>
+            <div className="flex justify-center gap-4 flex-wrap text-xs text-slate-500">
+              <a href="#" className="hover:text-amber-400 transition-colors">
+                Privacy Policy
+              </a>
+              <span>•</span>
+              <a href="#" className="hover:text-amber-400 transition-colors">
+                Terms of Service
+              </a>
+              <span>•</span>
+              <span>© 2025 RPG Portfolio</span>
+            </div>
+            <p className="text-xs text-slate-600 mt-4 font-pixel">
+              Level 99 Developer
+            </p>
+          </div>
+        </footer>
+    </>
   );
 }

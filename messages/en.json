@@ -62,12 +62,18 @@
       "backend": "Backend Sorcery",
       "tools": "Legendary Tools",
       "soft": "Guild Skills"
-    }
+    },
+    "noSkills": "No skills in this category yet"
   },
   "experience": {
     "title": "Journey Timeline",
     "subtitle": "Conquered territories and earned titles",
-    "present": "Present"
+    "present": "Present",
+    "noExperience": "No experience entries yet",
+    "checkBackSoon": "Check back soon for updates!",
+    "showLess": "Show Less",
+    "viewAllExperience": "View All Experience",
+    "more": " more"
   },
   "resume": {
     "title": "Equipment Inventory",
@@ -86,7 +92,8 @@
     },
     "success": "Message sent! The courier is on the way.",
     "error": "Quest failed. Try again?",
-    "social": "Find me in these realms"
+    "social": "Find me in these realms",
+    "prompt": "Open to remote opportunities, including training programs, full-time positions, or freelance projects. Ready to start immediately!"
   },
   "testimonials": {
     "title": "Trusted Allies",

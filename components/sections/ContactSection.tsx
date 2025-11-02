@@ -99,8 +99,7 @@ export default function ContactSection() {
 
             <div className="mt-8 dialogue-box">
               <p className="text-sm text-slate-300">
-                Looking for remote opportunities or freelance projects.
-                Available for full-time positions starting immediately!
+                {t('prompt')}
               </p>
             </div>
           </motion.div>

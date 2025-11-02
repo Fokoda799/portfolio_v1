@@ -1,26 +1,29 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { supabase } from '@/lib/supabase-client';
 import { X } from 'lucide-react';
 import Image from 'next/image';
+import { Skill } from '@/types/database';
+import { getTranslation } from '@/lib/i18n';
 
-interface Skill {
-  id: string;
-  name: string;
-  category: string;
-  proficiency: number;
-  icon?: string;
-  logo_url?: string;
-  description?: string;
-  years_experience?: number;
-  projects_count?: number;
-}
+// interface Skill {
+//   id: string;
+//   name: string;
+//   category: string;
+//   proficiency: number;
+//   icon?: string;
+//   logo_url?: string;
+//   description?: string;
+//   years_experience?: number;
+//   projects_count?: number;
+// }
 
 export default function SkillsSection() {
   const t = useTranslations('skills');
+  const locale = useLocale();
   const [skills, setSkills] = useState<Skill[]>([]);
   const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
 
@@ -90,20 +93,22 @@ export default function SkillsSection() {
                       <div className="w-8 h-8 flex items-center justify-center bg-white rounded p-1 flex-shrink-0">
                         {skill.icon ? (
                           <Image
+                            width={32}  
+                            height={32}
                             src={skill.icon} 
-                            alt={`${skill.name} logo`}
+                            alt={`${getTranslation(skill.name_i18n, locale)} logo`}
                             className="w-full h-full object-contain"
                           />
                         ) : (
                           <div className="w-full h-full bg-slate-300 rounded flex items-center justify-center text-xs font-bold text-slate-600">
-                            {skill.name.charAt(0)}
+                            {getTranslation(skill.name_i18n, locale).charAt(0)}
                           </div>
                         )}
                       </div>
 
                       <div className="flex-1 flex justify-between items-center">
                         <span className="text-sm font-pixel text-slate-300">
-                          {skill.name}
+                          {getTranslation(skill.name_i18n, locale)}
                         </span>
                         <span className="text-xs font-pixel text-amber-400">
                           {skill.proficiency}/100
@@ -125,7 +130,7 @@ export default function SkillsSection() {
 
                 {getSkillsByCategory(category).length === 0 && (
                   <p className="text-slate-500 text-sm text-center py-4">
-                    No skills in this category yet
+                    {t('noSkills')}
                   </p>
                 )}
               </div>
@@ -163,18 +168,18 @@ export default function SkillsSection() {
                   {selectedSkill.icon ? (
                     <Image
                       src={selectedSkill.icon} 
-                      alt={`${selectedSkill.name} logo`}
+                      alt={`${getTranslation(selectedSkill.name_i18n, locale)} logo`}
                       className="w-full h-full object-contain"
                     />
                   ) : (
                     <div className="w-full h-full bg-slate-300 rounded flex items-center justify-center text-2xl font-bold text-slate-600">
-                      {selectedSkill.name.charAt(0)}
+                      {getTranslation(selectedSkill.name_i18n, locale).charAt(0)}
                     </div>
                   )}
                 </div>
                 <div>
                   <h3 className="text-2xl font-pixel text-amber-400">
-                    {selectedSkill.name}
+                    {getTranslation(selectedSkill.name_i18n, locale)}
                   </h3>
                   <p className="text-sm text-slate-400 font-pixel">
                     {t(`categories.${selectedSkill.category}`)}
@@ -198,11 +203,11 @@ export default function SkillsSection() {
                   </p>
                 </div>
 
-                {selectedSkill.description && (
+                {selectedSkill.description_i18n && (
                   <div>
                     <p className="text-xs font-pixel text-amber-400 mb-2">DESCRIPTION</p>
                     <p className="text-sm text-slate-300 leading-relaxed">
-                      {selectedSkill.description}
+                      {getTranslation(selectedSkill.description_i18n, locale)}
                     </p>
                   </div>
                 )}

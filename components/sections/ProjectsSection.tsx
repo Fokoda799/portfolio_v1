@@ -1,30 +1,34 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, ChevronRight, X, Calendar, Award, Zap } from 'lucide-react';
 import { supabase } from '@/lib/supabase-client';
 import { useXP } from '@/contexts/XPContext';
 import { useAudio } from '@/contexts/AudioContext';
 import Image from 'next/image';
+import { Project } from '@/types/database';
+import { getTranslation } from '@/lib/i18n';
+import { get } from 'node:http';
 
-interface Project {
-  id: string;
-  title: string;
-  description: string;
-  thumbnail_url: string;
-  tech_stack: string[];
-  category: string;
-  demo_url?: string;
-  repo_url?: string;
-  featured?: boolean;
-  year?: string;
-  status?: string;
-}
+// interface Project {
+//   id: string;
+//   title: string;
+//   description: string;
+//   thumbnail_url: string;
+//   tech_stack: string[];
+//   category: string;
+//   demo_url?: string;
+//   repo_url?: string;
+//   featured?: boolean;
+//   year?: string;
+//   status?: string;
+// }
 
 export default function ProjectsSection() {
   const t = useTranslations('projects');
+  const locale = useLocale();
   const [projects, setProjects] = useState<Project[]>([]);
   const [filter, setFilter] = useState('all');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -145,7 +149,7 @@ export default function ProjectsSection() {
                     {project.thumbnail_url ? (
                       <Image
                         src={project.thumbnail_url}
-                        alt={project.title}
+                        alt={getTranslation(project.title_i18n, locale)}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                     ) : (
@@ -159,11 +163,11 @@ export default function ProjectsSection() {
                   </div>
 
                   <h3 className="font-pixel text-xl text-amber-400 mb-2 group-hover:text-amber-300 transition-colors">
-                    {project.title}
+                    {getTranslation(project.title_i18n, locale)}
                   </h3>
 
                   <p className="text-sm text-slate-300 mb-4 line-clamp-2">
-                    {project.description}
+                    {getTranslation(project.description_i18n, locale)}
                   </p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -248,7 +252,7 @@ export default function ProjectsSection() {
                     {project.thumbnail_url ? (
                       <Image
                         src={project.thumbnail_url}
-                        alt={project.title}
+                        alt={getTranslation(project.title_i18n, locale)}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                     ) : (
@@ -264,11 +268,11 @@ export default function ProjectsSection() {
                   </div>
 
                   <h3 className="font-pixel text-lg text-amber-400 mb-2 group-hover:text-amber-300 transition-colors">
-                    {project.title}
+                    {getTranslation(project.title_i18n, locale)}
                   </h3>
 
                   <p className="text-sm text-slate-300 mb-4 line-clamp-2">
-                    {project.description}
+                    {getTranslation(project.description_i18n, locale)}
                   </p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -350,7 +354,7 @@ export default function ProjectsSection() {
                 <div className="aspect-video bg-slate-700 mb-6 pixel-image overflow-hidden">
                   <Image
                     src={selectedProject.thumbnail_url}
-                    alt={selectedProject.title}
+                    alt={getTranslation(selectedProject.title_i18n, locale)}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -359,7 +363,7 @@ export default function ProjectsSection() {
               {/* Project Info */}
               <div className="flex items-start justify-between mb-4">
                 <h3 className="font-pixel text-2xl md:text-3xl text-amber-400 pr-8">
-                  {selectedProject.title}
+                  {getTranslation(selectedProject.title_i18n, locale)}
                 </h3>
               </div>
 
@@ -381,7 +385,7 @@ export default function ProjectsSection() {
               )}
 
               <p className="text-slate-300 mb-6 leading-relaxed text-base">
-                {selectedProject.description}
+                {getTranslation(selectedProject.description_i18n, locale)}
               </p>
 
               {/* Tech Stack */}

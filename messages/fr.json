@@ -62,12 +62,18 @@
       "backend": "Sorcellerie Backend",
       "tools": "Outils Légendaires",
       "soft": "Compétences de Guilde"
-    }
+    },
+    "noSkills": "Aucune compétence dans cette catégorie pour le moment"
   },
   "experience": {
     "title": "Chronologie du Voyage",
     "subtitle": "Territoires conquis et titres gagnés",
-    "present": "Présent"
+    "present": "Présent",
+    "noExperience": "Aucune expérience pour le moment",
+    "checkBackSoon": "Revenez bientôt pour des mises à jour!",
+    "showLess": "Voir Moins",
+    "viewAllExperience": "Voir Toute l'Expérience",
+    "more": " de plus"
   },
   "resume": {
     "title": "Inventaire d'Équipement",
@@ -86,7 +92,8 @@
     },
     "success": "Message envoyé ! Le courrier est en route.",
     "error": "Quête échouée. Réessayer ?",
-    "social": "Trouvez-moi dans ces royaumes"
+    "social": "Trouvez-moi dans ces royaumes",
+    "prompt": "Ouvert aux opportunités à distance, y compris les formations, les postes à temps plein ou les projets en freelance. Disponible immédiatement !"
   },
   "testimonials": {
     "title": "Alliés de Confiance",
