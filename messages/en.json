@@ -1,0 +1,122 @@
+{
+  "hud": {
+    "xp": "XP",
+    "mute": "Mute",
+    "unmute": "Unmute",
+    "them": "Toggle Theme",
+    "language": "Change Language"
+  },
+  "hero": {
+    "greeting": "Greetings, traveler!",
+    "intro": "Building Exceptional Software, One Line at a Time.",
+    "cta": {
+      "cv": "Equip My CV",
+      "projects": "Explore My Projects",
+      "contact": "Send Summons"
+    },
+    "xp": "XP",
+    "scroll": " Scroll to continue your adventure"
+  },
+  "nav": {
+    "home": "Hub",
+    "about": "Town Hall",
+    "projects": "Dungeon",
+    "skills": "Training Grounds",
+    "experience": "Timeline",
+    "resume": "Inventory",
+    "contact": "Quest Board",
+    "testimonials": "Allies"
+  },
+  "about": {
+    "title": "The Backstory",
+    "heading": "Quest: Building Digital Experiences",
+    "mission": "Every hero needs an origin story. Mine involves turning caffeine into code and bugs into features.",
+    "about": "I’m a self-taught software engineer passionate about building reliable, scalable, and user-focused applications. My main focus is backend development, where I enjoy designing APIs, managing databases, and optimizing system performance. I have a strong foundation in web technologies, cloud principles, and computer networking, which helps me create secure and efficient systems. Driven by curiosity and problem-solving, I’m constantly learning new tools and frameworks to expand my technical expertise and turn ideas into impactful software.",
+    "resume": "Accept Quest: Retrieve the Hero’s Resume",
+    "image": "Click to flip" 
+  },
+  "projects": {
+    "title": "Quests & Creations",
+    "subtitle": "Completed quests and crafted remarkable creations",
+    "filter": {
+      "all": "All Quests",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "fullstack": "Full Stack"
+    },
+    "featured_quests": "Featured Quests", 
+    "featured": "Featured",
+    "details": "View Details",
+    "liveDemo": "Demo",
+    "sourceCode": "Code",
+    "techStack": "Tech Stack",
+    "projects": "Projects",
+    "noQuests": "No quests found in this category",
+    "try": "Try exploring other categories!"
+  },
+  "skills": {
+    "title": "Character Stats",
+    "subtitle": "Skills forged through countless battles",
+    "categories": {
+      "frontend": "Frontend Mastery",
+      "backend": "Backend Sorcery",
+      "tools": "Legendary Tools",
+      "soft": "Guild Skills"
+    },
+    "noSkills": "No skills in this category yet"
+  },
+  "experience": {
+    "title": "Journey Timeline",
+    "subtitle": "Conquered territories and earned titles",
+    "present": "Present",
+    "noExperience": "No experience entries yet",
+    "checkBackSoon": "Check back soon for updates!",
+    "showLess": "Show Less",
+    "viewAllExperience": "View All Experience",
+    "more": " more"
+  },
+  "resume": {
+    "title": "Equipment Inventory",
+    "subtitle": "Everything a recruiter needs to join your party",
+    "download": "Download Scroll",
+    "print": "Printable Version"
+  },
+  "contact": {
+    "title": "Quest Board",
+    "subtitle": "Have a quest? Leave your mark here.",
+    "form": {
+      "name": "Your Name",
+      "email": "Raven Address",
+      "message": "Quest Details",
+      "send": "Dispatch Message"
+    },
+    "success": "Message sent! The courier is on the way.",
+    "error": "Quest failed. Try again?",
+    "social": "Find me in these realms",
+    "prompt": "Open to remote opportunities, including training programs, full-time positions, or freelance projects. Ready to start immediately!"
+  },
+  "testimonials": {
+    "title": "Trusted Allies",
+    "subtitle": "What fellow adventurers say"
+  },
+  "footer": {
+    "crafted": "Crafted with",
+    "privacy": "Privacy Scroll",
+    "language": "Language",
+    "theme": "Theme"
+  },
+  "audio": {
+    "consent": "Would you like background music for your adventure?",
+    "accept": "Yes, Play Music",
+    "decline": "No Thanks",
+    "mute": "Mute",
+    "unmute": "Unmute"
+  },
+  "achievements": {
+    "title": "Achievements Unlocked",
+    "visitor": "First Visit",
+    "explorer": "Section Explorer",
+    "reader": "Lore Master",
+    "clicker": "Button Masher"
+  }
+}
