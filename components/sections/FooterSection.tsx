@@ -1,9 +1,6 @@
 import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
 
 const FooterSection = () => {
-  const t = useTranslations('Footer');
-
   return (
     <footer className="bg-gradient-to-t from-slate-950 via-slate-900 to-slate-950 border-t-4 border-amber-500 py-12 px-6">
       <div className="max-w-6xl mx-auto text-center space-y-8">

@@ -67,8 +67,7 @@ export default function AboutSection({ onNavigate }: AboutSectionProps) {
                   <Image 
                     src="/images/pixel_me.png" 
                     alt="Profile Picture" 
-                    width={400} 
-                    height={400} 
+                    fill
                     className="rounded-lg w-full h-full object-cover object-center" 
                   />
                 </div>
@@ -84,8 +83,7 @@ export default function AboutSection({ onNavigate }: AboutSectionProps) {
                   <Image 
                     src="/images/me.png" 
                     alt="Alternate Profile" 
-                    width={400} 
-                    height={400} 
+                    fill
                     className="rounded-lg w-full h-full object-cover object-center" 
                   />
                 </div>

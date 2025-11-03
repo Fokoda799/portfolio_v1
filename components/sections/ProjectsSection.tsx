@@ -148,6 +148,7 @@ export default function ProjectsSection() {
                   <div className="aspect-video bg-slate-700 mb-4 pixel-image overflow-hidden relative">
                     {project.thumbnail_url ? (
                       <Image
+                        fill
                         src={project.thumbnail_url}
                         alt={getTranslation(project.title_i18n, locale)}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -251,6 +252,7 @@ export default function ProjectsSection() {
                   <div className="aspect-video bg-slate-700 mb-4 pixel-image overflow-hidden relative">
                     {project.thumbnail_url ? (
                       <Image
+                        fill
                         src={project.thumbnail_url}
                         alt={getTranslation(project.title_i18n, locale)}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -353,6 +355,7 @@ export default function ProjectsSection() {
               {selectedProject.thumbnail_url && (
                 <div className="aspect-video bg-slate-700 mb-6 pixel-image overflow-hidden">
                   <Image
+                    fill
                     src={selectedProject.thumbnail_url}
                     alt={getTranslation(selectedProject.title_i18n, locale)}
                     className="w-full h-full object-cover"

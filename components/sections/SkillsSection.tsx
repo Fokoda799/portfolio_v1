@@ -93,8 +93,7 @@ export default function SkillsSection() {
                       <div className="w-8 h-8 flex items-center justify-center bg-white rounded p-1 flex-shrink-0">
                         {skill.icon ? (
                           <Image
-                            width={32}  
-                            height={32}
+                            fill
                             src={skill.icon} 
                             alt={`${getTranslation(skill.name_i18n, locale)} logo`}
                             className="w-full h-full object-contain"
@@ -167,6 +166,7 @@ export default function SkillsSection() {
                 <div className="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
                   {selectedSkill.icon ? (
                     <Image
+                      fill
                       src={selectedSkill.icon} 
                       alt={`${getTranslation(selectedSkill.name_i18n, locale)} logo`}
                       className="w-full h-full object-contain"

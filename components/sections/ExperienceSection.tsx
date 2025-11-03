@@ -216,8 +216,7 @@ export default function ExperienceSection() {
                               {exp.logo_url && (
                                 <div className="flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden bg-slate-700 p-2">
                                   <Image
-                                    width={32}
-                                    height={32}
+                                    fill
                                     src={exp.logo_url}
                                     alt={getTranslation(exp.institution_i18n, locale) + " logo"}
                                     className="w-full h-full object-contain"
