@@ -56,7 +56,7 @@ const FooterSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Level 99 Developer
+            Abdellah Nait Hadid
           </motion.p>
           
           <p className="text-xs md:text-sm text-slate-600 font-pixel">

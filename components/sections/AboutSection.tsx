@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Download } from 'lucide-react';
 import Image from 'next/image';
@@ -12,11 +12,12 @@ interface AboutSectionProps {
 
 export default function AboutSection({ onNavigate }: AboutSectionProps) {
   const t = useTranslations('about');
+  const locale = useLocale();
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleDownloadResume = () => {
     // Add your resume download logic here
-    const resumeUrl = '/resume.pdf'; // Update with your actual resume path
+    const resumeUrl = `/pdf/resume_${locale}.pdf`;
     const link = document.createElement('a');
     link.href = resumeUrl;
     link.download = 'Resume.pdf';
