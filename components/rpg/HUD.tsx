@@ -26,7 +26,7 @@ export default function HUD() {
   const locales = [
     { code: 'en', label: 'EN', name: 'English' },
     { code: 'fr', label: 'FR', name: 'Français' },
-    { code: 'ar', label: 'AR', name: 'العربية' },
+    // { code: 'ar', label: 'AR', name: 'العربية' },
   ];
 
   const currentLocale = pathname.split('/')[1] || 'en';

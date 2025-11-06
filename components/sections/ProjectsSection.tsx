@@ -148,6 +148,7 @@ export default function ProjectsSection() {
                   <div className="aspect-video bg-slate-700 mb-4 pixel-image overflow-hidden relative">
                     {project.thumbnail_url ? (
                       <Image
+                        fill
                         src={project.thumbnail_url}
                         alt={getTranslation(project.title_i18n, locale)}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -251,6 +252,7 @@ export default function ProjectsSection() {
                   <div className="aspect-video bg-slate-700 mb-4 pixel-image overflow-hidden relative">
                     {project.thumbnail_url ? (
                       <Image
+                        fill
                         src={project.thumbnail_url}
                         alt={getTranslation(project.title_i18n, locale)}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -344,18 +346,19 @@ export default function ProjectsSection() {
               {/* Close Button */}
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 p-2 bg-slate-700 hover:bg-slate-600 rounded-lg transition-colors"
+                className="absolute top-4 right-4 p-2 z-10 bg-slate-700 hover:bg-slate-600 rounded-lg transition-colors"
               >
                 <X className="w-5 h-5 text-slate-300" />
               </button>
 
               {/* Project Image */}
               {selectedProject.thumbnail_url && (
-                <div className="aspect-video bg-slate-700 mb-6 pixel-image overflow-hidden">
+                <div className="relative aspect-video pixel-borders bg-slate-700 mb-6 pixel-image hover:border-none overflow-hidden">
                   <Image
+                    fill
                     src={selectedProject.thumbnail_url}
                     alt={getTranslation(selectedProject.title_i18n, locale)}
-                    className="w-full h-full object-cover"
+                    className="object-cover"
                   />
                 </div>
               )}

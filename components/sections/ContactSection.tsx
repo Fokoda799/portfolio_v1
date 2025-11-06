@@ -41,10 +41,10 @@ export default function ContactSection() {
   };
 
   const socialLinks = [
-    { icon: Github, label: 'GitHub', url: 'https://github.com', color: 'hover:text-purple-400' },
-    { icon: Linkedin, label: 'LinkedIn', url: 'https://linkedin.com', color: 'hover:text-blue-400' },
+    { icon: Github, label: 'GitHub', url: 'https://github.com/Fokoda799', color: 'hover:text-purple-400' },
+    { icon: Linkedin, label: 'LinkedIn', url: 'https://linkedin.com/in/abdellah-hadid', color: 'hover:text-blue-400' },
     { icon: Twitter, label: 'Twitter', url: 'https://twitter.com', color: 'hover:text-sky-400' },
-    { icon: Mail, label: 'Email', url: 'mailto:hello@example.com', color: 'hover:text-amber-400' },
+    { icon: Mail, label: 'Email', url: 'mailto:abdllahhadid@gmail.com', color: 'hover:text-amber-400' },
   ];
 
   return (

@@ -1,9 +1,6 @@
 import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
 
 const FooterSection = () => {
-  const t = useTranslations('Footer');
-
   return (
     <footer className="bg-gradient-to-t from-slate-950 via-slate-900 to-slate-950 border-t-4 border-amber-500 py-12 px-6">
       <div className="max-w-6xl mx-auto text-center space-y-8">
@@ -59,7 +56,7 @@ const FooterSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Level 99 Developer
+            Abdellah Nait Hadid
           </motion.p>
           
           <p className="text-xs md:text-sm text-slate-600 font-pixel">

@@ -58,12 +58,20 @@
     "title": "Statistiques du Personnage",
     "subtitle": "Compétences forgées à travers d'innombrables batailles",
     "categories": {
-      "frontend": "Maîtrise Frontend",
-      "backend": "Sorcellerie Backend",
+      "all": "Toutes les Compétences",
+      "languages": "Maîtrise des Langages",
+      "frameworks": "Sorcellerie des Frameworks",
       "tools": "Outils Légendaires",
-      "soft": "Compétences de Guilde"
+      "technologies": "Technologies Anciennes"
     },
-    "noSkills": "Aucune compétence dans cette catégorie pour le moment"
+    "noSkills": "Aucune compétence dans cette catégorie pour le moment",
+    "proficient": "Compétent",
+    "yrs": "ans",
+    "projects": "projets",
+    "details": "Voir les Détails",
+    "experience": "EXPÉRIENCE",
+    "projectsCompleted": "PROJETS TERMINÉS",
+    "about": "À PROPOS"
   },
   "experience": {
     "title": "Chronologie du Voyage",

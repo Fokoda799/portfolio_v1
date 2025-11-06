@@ -26,7 +26,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
   );
   
   const handleCTA = (section: string, xpAmount: number) => {
-    playSound('click');
+    // playSound('click');
     // addXP(xpAmount);
     onNavigate(section);
   };
@@ -431,7 +431,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
               ease: "easeInOut"
             }}
           >
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1 cursor-pointer" onClick={() => onNavigate('about')}>
               <span className="text-amber-400 text-xl">▼</span>
             </div>
           </motion.div>

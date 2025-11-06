@@ -93,7 +93,7 @@ export default function HomePage() {
 
   return (
     <>
-      <main className="relative min-h-screen">
+      <main className="relative min-h-screen overflow-x-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900" />
 
         {/* Mouse glow */}

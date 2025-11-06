@@ -58,12 +58,20 @@
     "title": "Character Stats",
     "subtitle": "Skills forged through countless battles",
     "categories": {
-      "frontend": "Frontend Mastery",
-      "backend": "Backend Sorcery",
+      "all": "All Skills",
+      "languages": "Magic Languages",
+      "frameworks": "Spell Frameworks",
       "tools": "Legendary Tools",
-      "soft": "Guild Skills"
+      "technologies": "Ancient Technologies"
     },
-    "noSkills": "No skills in this category yet"
+    "noSkills": "No skills in this category yet",
+    "proficient": "Proficient",
+    "yrs": "yrs",
+    "projects": "projects",
+    "details": "Click for details",
+    "experience": "EXPERIENCE",
+    "projectsCompleted": "PROJECTS COMPLETED",
+    "about": "ABOUT"
   },
   "experience": {
     "title": "Journey Timeline",

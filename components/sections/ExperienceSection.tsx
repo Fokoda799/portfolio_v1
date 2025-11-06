@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Briefcase, MapPin, Calendar, ChevronDown, ChevronUp, Star } from 'lucide-react';
+import { Briefcase, MapPin, Calendar, ChevronDown, ChevronUp, Star, BookOpen } from 'lucide-react';
 import { supabase } from '@/lib/supabase-client';
 import Image from 'next/image';
 import { Experience } from '@/types/database';
@@ -109,7 +109,7 @@ export default function ExperienceSection() {
                 {displayedExperiences.map((exp, index) => {
                   const isExpanded = expandedItems.has(exp.id);
                   const isLeft = index % 2 === 0;
-                  const isCurrent = !exp.end_date;
+                  const isCurrent = !exp.end_date || exp.end_date > new Date().toISOString().split('T')[0];
                   const achievements = getTranslationArray(exp.achievements_i18n, locale) ?? [];
                   
                   return (
@@ -153,7 +153,7 @@ export default function ExperienceSection() {
                             {isCurrent ? (
                               <Star className="w-5 h-5 text-black drop-shadow-[0_0_4px_rgba(255,255,255,0.8)] animate-pulse" />
                             ) : (
-                              <Briefcase className="w-5 h-5 text-white/90 drop-shadow-[0_0_3px_rgba(255,255,255,0.4)]" />
+                              <BookOpen className="w-5 h-5 text-white/90 drop-shadow-[0_0_3px_rgba(255,255,255,0.4)]" />
                             )}
                           </div>
                         </motion.div>
@@ -214,15 +214,16 @@ export default function ExperienceSection() {
                               </div>
 
                               {exp.logo_url && (
-                                <div className="flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden bg-slate-700 p-2">
+                                <div className="relative flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden bg-slate-700 p-1">
                                   <Image
-                                    width={32}
-                                    height={32}
                                     src={exp.logo_url}
-                                    alt={getTranslation(exp.institution_i18n, locale) + " logo"}
-                                    className="w-full h-full object-contain"
+                                    alt={`${getTranslation(exp.institution_i18n, locale)} logo`}
+                                    fill
+                                    className="object-cover"
+                                    sizes="40px"
                                   />
                                 </div>
+
                               )}
                             </div>
 

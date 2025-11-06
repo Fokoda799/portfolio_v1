@@ -1,9 +1,11 @@
 "use client";
 
+import { Suspense } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
 import { AudioProvider } from '@/contexts/AudioContext';
 import { XPProvider } from '@/contexts/XPContext';
 import { ManualThemeProvider } from '@/contexts/ThemContext';
+import Loading from '@/app/loading';
 
 export function Providers({
   children,
@@ -23,7 +25,9 @@ export function Providers({
       >
         <AudioProvider>
           <XPProvider>
-            {children}
+            <Suspense fallback={<Loading />}>
+              {children}
+            </Suspense>
           </XPProvider>
         </AudioProvider>
       </NextIntlClientProvider>
